@@ -24,7 +24,7 @@
     "tape": "^2.13.1"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "tape test.js"
   },
   "testling": {
     "files": [

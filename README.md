@@ -7,7 +7,11 @@ architecture that we all wrote in CS 101.
 
 This can typically be used as a drop-in replacement for an array, and it's only 38 lines of code.
 
-Usage:
+### Status
+
+[![browser support](https://ci.testling.com/nolanlawson/tiny-queue.png)](https://ci.testling.com/nolanlawson/tiny-queue)
+
+### Usage
 
 ```
 npm install tiny-queue
@@ -26,6 +30,8 @@ queue.shift(); //'bar'
 queue.length; // 0
 queue.shift(); // undefined
 ```
+
+### API
 
 The returned `Queue` object, once instantiated, only supports
 four operations:

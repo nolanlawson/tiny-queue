@@ -1,6 +1,6 @@
 {
   "name": "tiny-queue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple FIFO queue implementation to avoid having to do shift() on an array, which is slow.",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,29 @@
   "bugs": {
     "url": "https://github.com/nolanlawson/tiny-queue/issues"
   },
-  "homepage": "https://github.com/nolanlawson/tiny-queue"
+  "homepage": "https://github.com/nolanlawson/tiny-queue",
+  "devDependencies": {
+    "tape": "^2.13.1"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "testling": {
+    "files": [
+      "test.js"
+    ],
+    "browsers": [
+      "iexplore/8..latest",
+      "chrome/22..latest",
+      "chrome/canary",
+      "firefox/24..latest",
+      "firefox/nightly",
+      "opera/15..latest",
+      "opera/next",
+      "safari/5.0.5..latest",
+      "iphone/latest",
+      "ipad/latest",
+      "android-browser/latest"
+    ]
+  }
 }

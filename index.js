@@ -2,13 +2,6 @@
 
 // Simple FIFO queue implementation to avoid having to do shift()
 // on an array, which is slow.
-// The returned Queue object, once instantiated, only supports
-// three operations:
-// queue.push()
-// queue.shift()
-// queue.length
-// So it's basically a drop-in replacement for most naive usages
-// of an array as a queue.
 
 function Queue() {
   this.length = 0;
@@ -34,5 +27,22 @@ Queue.prototype.shift = function () {
     return node.item;
   }
 };
+
+Queue.prototype.slice = function (start, end) {
+  start = typeof start === 'undefined' ? 0 : start;
+  end = typeof end === 'undefined' ? Infinity : end;
+
+  var output = [];
+
+  var i = 0;
+  for (var node = this.first; node; node = node.next) {
+    if (--end < 0) {
+      break;
+    } else if (++i > start) {
+      output.push(node.item);
+    }
+  }
+  return output;
+}
 
 module.exports = Queue;

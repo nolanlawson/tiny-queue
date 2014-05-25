@@ -3,7 +3,7 @@ tiny-queue
 
 A simple FIFO queue implementation to avoid having to do `shift()`
 on an array, which is slow. It's implemented in the straightforward `root -> node1 -> node2 -> etc.`
-architecture that we all wrote in CS 101.
+architecture that we all remember from CS 101.
 
 This can typically be used as a drop-in replacement for an array, and it's only 38 lines of code.
 

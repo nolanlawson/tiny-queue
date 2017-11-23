@@ -1,11 +1,13 @@
 tiny-queue
 ============
 
-A simple FIFO queue implementation to avoid having to do `shift()`
-on an array, which is slow. It's implemented in the straightforward `root -> node1 -> node2 -> etc.`
-architecture that we all remember from CS 101.
+A simple FIFO queue implementation as a linked list. The main benefit is to avoid doing `shift()`
+on an array, which may be slow. It's implemented in the straightforward `root -> node1 -> node2 -> etc.`
+architecture that you may have learned in CS 101.
 
 This can typically be used as a drop-in replacement for an array, and it's only 38 lines of code.
+
+See [this Wikipedia page](https://en.wikipedia.org/wiki/Linked_list#Tradeoffs) for a good explanation of the tradeoffs of a linked list versus other data structures.
 
 ### Status
 
